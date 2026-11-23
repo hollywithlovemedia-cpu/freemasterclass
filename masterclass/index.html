@@ -85,6 +85,19 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 }
 .mc-cut-desk{position:absolute;left:-60px;bottom:-10px;width:190px;z-index:3;transform:rotate(-3deg);filter:drop-shadow(0 16px 26px rgba(0,0,0,.6))}
 @media (max-width:900px){.mc-cut-desk{display:none}}
+.devices{position:relative;width:100%;max-width:500px;margin:0 auto;aspect-ratio:500/400}
+.dev-laptop{--r:0deg;position:absolute;left:10%;top:4%;width:80%}
+.dl-screen{background:#1b1919;border:2px solid #3a3434;border-radius:14px 14px 4px 4px;padding:8px 8px 12px;box-shadow:0 24px 50px rgba(0,0,0,.6)}
+.dl-screen img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:4px}
+.dl-base{height:11px;margin:0 -7%;background:linear-gradient(#cfc8bf,#8f877d);border-radius:0 0 14px 14px;position:relative}
+.dl-base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:4px;background:#7d766d;border-radius:0 0 6px 6px}
+.dev-ipad{--r:-6deg;position:absolute;left:0;bottom:2%;width:42%;background:#1b1919;border:2px solid #3a3434;border-radius:14px;padding:7px;box-shadow:0 22px 44px rgba(0,0,0,.6)}
+.dev-ipad img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px}
+.dev-phone{--r:6deg;position:absolute;right:2%;bottom:0;width:20%;background:#1b1919;border:2px solid #3a3434;border-radius:18px;padding:5px;box-shadow:0 22px 44px rgba(0,0,0,.6)}
+.dev-phone img{display:block;width:100%;aspect-ratio:9/18;object-fit:cover;object-position:bottom;border-radius:13px}
+.dev-phone::before{content:"";position:absolute;left:50%;top:9px;transform:translateX(-50%);width:28%;height:6px;border-radius:6px;background:#1b1919;z-index:1}
+.bts-tag{position:absolute;left:46%;bottom:4%;transform:rotate(-4deg);background:#d9c2a5;color:#151313;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:13px;letter-spacing:.06em;padding:7px 12px;border-radius:999px;box-shadow:0 10px 20px rgba(0,0,0,.45);white-space:nowrap}
+@media (max-width:700px){.devices{max-width:92%}.bts-tag{font-size:11px;left:40%}}
 @media (max-width: 700px){.hide-sm{display:none}}
 @media (prefers-reduced-motion: reduce){.track,.float,.float-2,.spin,.pulse,.glow,.wiggle{animation:none}}
 </style>
@@ -126,23 +139,16 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 </div>
 </div>
 <div class="mc-visual">
-<img class="mc-cut-desk hide-sm" src="/images/holly_cutout.png" alt="Holly Newman">
-<div class="laptop float">
-<div class="laptop-screen">
-<div class="screen-inner">
-<img src="/images/holly_sofa_wide.jpg" alt="" aria-hidden="true" class="screen-bg">
-<div class="screen-copy">
-<p class="screen-kicker">FREE MASTERCLASS</p>
-<p class="screen-title">Seen, Trusted, Chosen</p>
-<p class="screen-sub">with Holly Newman</p>
+<div class="devices">
+<div class="dev-laptop float">
+<div class="dl-screen"><img src="/images/mc_laptop.jpg" alt="Inside the masterclass: the Seen, Trusted, Chosen framework slide"></div>
+<div class="dl-base"></div>
 </div>
-<span class="screen-play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#151313"><path d="M8 5v14l11-7z"/></svg></span>
-<div class="screen-bar"><span></span></div>
+<div class="dev-ipad float-2"><img src="/images/mc_ipad.jpg" alt="Inside the masterclass: seven ways to lower the risk so booking you feels safe"></div>
+<div class="dev-phone float"><img src="/images/mc_phone.jpg" alt="Holly teaching inside the masterclass"></div>
+<span class="bts-tag">a peek inside 👀</span>
+<img class="sticker wiggle" src="/images/st_fawnstar.png" alt="" aria-hidden="true" style="--r: 12deg; right: -6px; top: -26px; width: 84px; height: auto">
 </div>
-</div>
-<div class="laptop-base"></div>
-</div>
-<img class="sticker wiggle" src="/images/st_fawnstar.png" alt="" aria-hidden="true" style="--r: 12deg; right: -10px; top: -40px; width: 110px; height: auto">
 </div>
 </div>
 </section>
