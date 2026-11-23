@@ -56,7 +56,7 @@ img{max-width:100%}
 .reveal.in{opacity:1;transform:none}
 /* hero */
 .hero{position:relative;padding:56px 0 110px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,820px);gap:56px;align-items:center}
 .video-wrap{position:relative}
 .video-frame{position:relative;aspect-ratio:9/16;max-height:640px;margin:0 auto;border-radius:28px;overflow:hidden;border:10px solid #f5efe6;box-shadow:0 30px 70px rgba(0,0,0,.6);background:#1c1717}
 .video-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -65,6 +65,8 @@ img{max-width:100%}
 @keyframes glowring{0%,100%{box-shadow:0 0 0 0 rgba(240,222,196,.5)}50%{box-shadow:0 0 0 18px rgba(240,222,196,0)}}
 .play-text{font-family:'Inter Tight',sans-serif;font-weight:800;letter-spacing:.14em;font-size:13px}
 .play[hidden]{display:none}
+.hook-row{display:flex;align-items:center;gap:22px}
+.hook-pic{flex:0 0 auto;width:150px;height:190px;object-fit:cover;object-position:center 20%;border:6px solid #f5efe6;border-radius:14px;transform:rotate(4deg);box-shadow:0 18px 36px rgba(0,0,0,.55)}
 /* tabs */
 .tablist{display:flex;flex-wrap:wrap;gap:10px;padding:8px;background:#1d1919;border-radius:999px;width:max-content;max-width:100%}
 .tab{border:0;cursor:pointer;min-height:52px;padding:0 24px;border-radius:999px;background:transparent;color:#d9c2a5;font-family:'Inter Tight',sans-serif;font-weight:800;letter-spacing:.12em;font-size:13px;transition:background .25s ease,color .25s ease,transform .2s ease}
@@ -99,6 +101,8 @@ img{max-width:100%}
 .feature .card-body{padding:30px}
 .hide-sm{display:none}
 .photo-stack{min-height:300px!important}
+.hook-pic{width:96px;height:124px;border-width:4px}
+.hook-row{gap:14px}
 .tablist{border-radius:22px}
 .tab{flex:1 1 40%}
 }
@@ -144,7 +148,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <div class="wrap hero-grid" style="position:relative">
 <div style="display:flex;flex-direction:column;gap:26px">
 <p class="eyebrow">hello, welcome in</p>
-<h1 class="display" style="font-size:clamp(40px,5.6vw,78px)">Your content should be as <span style="color:#d9c2a5">skilled</span> as you are</h1>
+<div class="hook-row"><h1 class="display" style="font-size:clamp(36px,5.6vw,78px)">Your content should be as <span style="color:#d9c2a5">skilled</span> as you are</h1><img class="hook-pic" src="../images/holly_pose.jpg" alt="Holly Newman"></div>
 <p style="margin:0;max-width:560px;font-size:19px;line-height:1.65;color:#e6ddd2">I'm Holly, content strategist and founder of With Love Media. I help coaches, educators and specialists who are brilliant at what they do get seen, trusted and chosen online, so strangers book them without needing to meet them first.</p>
 <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center">
 <a class="btn" href="/">WATCH THE FREE MASTERCLASS <span class="arrow">→</span></a>
@@ -153,21 +157,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:10px">
 <div><p class="display" style="font-size:34px;color:#d9c2a5">14 years</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">building businesses online</p></div>
 <div><p class="display" style="font-size:34px;color:#d9c2a5">Since 2016</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">coaching women like you</p></div>
-<div><p class="display" style="font-size:34px;color:#d9c2a5">95%</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">of my business is outside the UK</p></div>
 </div>
-</div>
-<div class="video-wrap">
-<div class="video-frame" style="max-width:360px">
-<video id="welcome" playsinline preload="metadata" poster="../images/holly_sofa_wide.jpg">
-<source src="../videos/welcome.mp4" type="video/mp4">
-</video>
-<button class="play" id="playBtn" type="button" aria-label="Play Holly's welcome video">
-<span class="play-ring" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="#151313"><path d="M8 5v14l11-7z"/></svg></span>
-<span class="play-text" id="playText">PRESS PLAY. A QUICK HELLO FROM ME</span>
-</button>
-</div>
-<img class="sticker wiggle" src="../images/st_fawnstar.png" alt="" aria-hidden="true" style="--r:12deg;right:2%;top:-24px;width:120px">
-<img class="sticker spin hide-sm" src="../images/logo_submark.png" alt="" aria-hidden="true" style="left:4%;bottom:-30px;width:120px;filter:none">
 </div>
 </div>
 </section>
@@ -267,14 +257,13 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <h3 style="font-size:clamp(26px,3vw,40px)">The Standard</h3>
 <p>My whole body of work, with me beside you. The full Seen, Trusted, Chosen method, content creation, sales strategy and how to articulate yourself so social media becomes your biggest source of leads.</p>
 <ul>
-<li>An audio programme in short bursts covering everything I teach</li>
+<li>A full bingeable programme covering everything I teach, so clients start buying the day they find you</li>
 <li>A monthly 1:1 with me, plus group sessions</li>
-<li>Monday to Friday access, including a content audit space</li>
-<li>Challenge days and ongoing uploads of what I'm testing now</li>
+<li>Monday to Thursday access to me in Telegram for daily support</li>
+<li>Ongoing uploads of everything I'm testing and learning</li>
 </ul>
-<p class="price">£4,200 <span style="font-size:16px;font-weight:700;letter-spacing:0">for 6 months</span></p>
-<p class="note">Join before 3rd January for early access, a longer payment plan and your £175 intensive refunded.</p>
-<a class="btn btn-dark" href="https://ig.me/m/holly_withlove">DM ME STANDARD <span class="arrow">→</span></a>
+<p class="note">Doors open 3rd January. Enquire now to hear about early access.</p>
+<a class="btn btn-dark" href="https://ig.me/m/holly_withlove">ENQUIRE NOW <span class="arrow">→</span></a>
 </div>
 </div>
 </div>
@@ -359,20 +348,12 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
       if(e.key==='ArrowLeft'){select(tabs[(i-1+tabs.length)%tabs.length],true);e.preventDefault();}
     });
   });
-  // welcome video
-  var v=document.getElementById('welcome'),b=document.getElementById('playBtn'),txt=document.getElementById('playText'),ok=false;
-  v.addEventListener('loadedmetadata',function(){ok=true});
-  b.addEventListener('click',function(){
-    if(!ok){txt.textContent='MY WELCOME VIDEO IS COMING SOON';return;}
-    v.controls=true;b.hidden=true;v.play();
-    if(window.fbq)fbq('trackCustom','WelcomeVideoPlay');
-  });
   // tag Stan links and track leads
   document.querySelectorAll('a[href*="stan.store"]').forEach(function(a){
     var u=new URL(a.href);u.searchParams.set('utm_source','hollywithlove');u.searchParams.set('utm_medium','home_page');a.href=u.toString();
     a.addEventListener('click',function(){if(window.fbq)fbq('track','Lead',{content_name:a.textContent.trim()});});
   });
-  document.querySelectorAll('a[href*="ig.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('track','Contact',{content_name:'DM STANDARD'});});});
+  document.querySelectorAll('a[href*="ig.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('track','Contact',{content_name:'Enquire The Standard'});});});
   // reveal on scroll
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
