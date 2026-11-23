@@ -98,6 +98,27 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 .dev-phone::before{content:"";position:absolute;left:50%;top:9px;transform:translateX(-50%);width:28%;height:6px;border-radius:6px;background:#1b1919;z-index:1}
 .bts-tag{position:absolute;left:46%;bottom:4%;transform:rotate(-4deg);background:#d9c2a5;color:#151313;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:13px;letter-spacing:.06em;padding:7px 12px;border-radius:999px;box-shadow:0 10px 20px rgba(0,0,0,.45);white-space:nowrap}
 @media (max-width:700px){.devices{max-width:92%}.bts-tag{font-size:11px;left:40%}}
+.mc-hero{background:linear-gradient(rgba(12,10,9,.55),rgba(12,10,9,.7)),url(/images/tex_leather.jpg) center/cover}
+.mc-visual{flex:none;width:100%;padding:0}
+.devices{max-width:640px;margin:0 auto}
+.mc-top-text{width:100%}
+.mc-shot img{width:100%}
+@media (max-width:700px){.devices{max-width:100%}}
+.about-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.about-stats>div{display:flex;flex-direction:column;justify-content:center;text-align:left}
+.cta-row{display:flex;justify-content:center;margin-top:8px}
+@media (max-width:700px){
+.about-card{padding:26px!important}
+.about-card>div:not(.about-stats)>p:not(:first-child){font-size:16px!important}
+.about-stats{grid-template-columns:1fr 1fr 1fr!important;gap:8px!important}
+.about-stats>div{padding:12px!important}
+.about-stats>div p:first-child{font-size:20px!important}
+.about-stats>div p:last-child{font-size:12px!important}
+.about-stack{min-height:0!important;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px!important}
+.about-stack .photo{position:static!important;width:100%!important;transform:none!important;border-width:5px!important}
+.about-stack .sticker{display:none}
+.btn{padding:0 22px;font-size:13px}
+}
 @media (max-width: 700px){.hide-sm{display:none}}
 @media (prefers-reduced-motion: reduce){.track,.float,.float-2,.spin,.pulse,.glow,.wiggle{animation:none}}
 </style>
@@ -120,19 +141,16 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 </div>
 </header>
 
-<section style="position: relative; padding: 72px 24px 110px; background: #0f0d0d">
-<div class="tex-leo-tall" style="position: absolute; top: 0; right: 0; width: 34%; height: 100%; opacity: 0.9"></div>
-<div style="position: absolute; top: 0; right: 0; width: 34%; height: 100%; background: linear-gradient(90deg, #0f0d0d 0%, rgba(15,13,13,0.35) 40%, rgba(15,13,13,0) 100%)"></div>
-<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
-<div style="flex: 999 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<section class="mc-hero" style="position: relative; padding: 64px 24px 80px">
+<div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 26px">
 <div class="mc-top">
 <div class="mc-top-text">
 <p class="mc-label">Free masterclass</p>
-<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(32px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.01em; color: #f5efe6; text-wrap: balance">A 60 minute session showing you how to get <span style="color: #d9c2a5">5 to 10 more clients</span> from social media this month</h1>
+<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(32px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.01em; color: #f5efe6; text-wrap: balance; max-width: 1200px">A 60 minute session showing you how to get <span style="color: #d9c2a5">5 to 10 more clients</span> from social media this month</h1>
 </div>
-<img class="mc-cutout" src="/images/holly_cutout.png" alt="Holly Newman">
 </div>
-<p style="margin: 0; max-width: 600px; font-size: 19px; line-height: 1.6; color: #e6ddd2">By the end you'll know exactly what to say so your content sells the way you do in person. Seen, Trusted, Chosen, my method for turning strangers into clients without ever meeting them first.</p>
+<p style="margin: 0; max-width: 760px; font-size: 19px; line-height: 1.6; color: #e6ddd2">By the end you'll know exactly what to say so your content sells the way you do in person. Seen, Trusted, Chosen, my method for turning strangers into clients without ever meeting them first.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: center">
 <a class="btn glow" href="https://stan.store/Withlove/p/content-strategy-free-training-seen-trusted-chosen?utm_source=hollywithlove&amp;utm_medium=landing_page&amp;utm_campaign=free_masterclass">GET INSTANT ACCESS <span class="arrow">→</span></a>
 <span style="font-size: 15px; color: #c9b39b">Free. Watch it tonight.</span>
@@ -176,6 +194,7 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #e6ddd2"><strong style="color: #f5efe6">Your new offer got compliments instead of sales.</strong> Everyone said they loved it. Hardly anyone bought it.</p>
 </div>
 </div>
+<div class="cta-row"><a class="btn glow" href="https://stan.store/Withlove/p/content-strategy-free-training-seen-trusted-chosen?utm_source=hollywithlove&amp;utm_medium=landing_page&amp;utm_campaign=free_masterclass">GET FREE ACCESS, CLICK HERE <span class="arrow">→</span></a></div>
 </div>
 </section>
 
@@ -222,7 +241,7 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 
 <section id="proof" style="background: #0f0d0d; padding: 104px 0 80px">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 14px; position: relative">
-<img class="sticker wiggle" src="/images/st_folder.png" alt="" aria-hidden="true" style="--r: 8deg; right: 24px; top: -10px; width: 170px; height: auto">
+<img class="sticker wiggle" src="/images/st_folder.png" alt="" aria-hidden="true" style="--r: 8deg; right: 24px; top: -10px; width: 95px; height: auto">
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: #d9c2a5">the proof</p>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 4vw, 54px); line-height: 1.02; color: #f5efe6">Straight from my DMs</h2>
 <p style="margin: 0 0 30px; font-size: 18px; color: #c9b39b">Real messages from women who changed what they say online.</p>
@@ -258,7 +277,6 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 
 <section id="inside" class="polka" style="color: #151313; padding: 104px 24px">
 <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; position: relative">
-<img class="sticker wiggle" src="/images/st_controls.png" alt="" aria-hidden="true" style="--r: 7deg; right: 10px; top: -60px; width: 150px; height: auto; z-index: 2">
 <div style="display: flex; flex-direction: column; gap: 10px; align-self: flex-start; background: #fbf5e6; padding: 24px 28px; border-radius: 18px; max-width: 760px; box-shadow: 0 14px 30px rgba(0,0,0,0.12)">
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: #8a6d52">inside the training</p>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 4vw, 54px); line-height: 1.02">Sixty minutes that change how you post forever</h2>
@@ -282,9 +300,9 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <div class="tex-croc" style="position: absolute; left: 0; top: 0; width: 22%; height: 100%; opacity: 0.85"></div>
 <div style="position: absolute; left: 0; top: 0; width: 22%; height: 100%; background: linear-gradient(270deg, #0f0d0d 0%, rgba(15,13,13,0) 100%)"></div>
 <div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
-<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 10px">
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(56px, 7vw, 96px); line-height: 0.95; color: #f5efe6">about me.</p>
-<div style="position: relative; min-height: 640px; margin-top: 24px">
+<div class="about-stack" style="position: relative; min-height: 640px; margin-top: 24px">
 <img class="photo" src="/images/holly_coffee.jpg" alt="Coffee, chocolate and a claw clip on Holly's desk" style="position: absolute; left: 4%; top: 330px; width: 40%; height: auto; border: 8px solid #f5efe6; border-radius: 4px; transform: rotate(3deg); box-shadow: 0 20px 40px rgba(0,0,0,0.5)">
 <img class="sticker wiggle" src="/images/st_fawnstar.png" alt="" aria-hidden="true" style="--r: -10deg; left: 36%; top: 250px; width: 110px; height: auto; z-index: 3">
 <img class="photo" src="/images/holly_sofa_wide.jpg" alt="Holly on a cream sofa with her laptop" style="position: absolute; left: 0; top: 0; width: 58%; height: auto; border: 8px solid #f5efe6; border-radius: 4px; transform: rotate(-3deg); box-shadow: 0 20px 40px rgba(0,0,0,0.5)">
@@ -292,9 +310,9 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <img class="photo" src="/images/holly_floor.jpg" alt="Holly sitting on the floor with her laptop and With Love cup" style="position: absolute; right: 8%; top: 300px; width: 40%; height: auto; border: 8px solid #f5efe6; border-radius: 4px; transform: rotate(-2deg); box-shadow: 0 20px 40px rgba(0,0,0,0.5)">
 </div>
 </div>
-<div style="flex: 999 1 480px; min-width: 0; background: #f5efe6; color: #151313; border-radius: 20px; padding: 42px; display: flex; flex-direction: column; gap: 22px">
+<div class="about-card" style="flex: 999 1 320px; min-width: 0; background: #f5efe6; color: #151313; border-radius: 20px; padding: 42px; display: flex; flex-direction: column; gap: 22px">
 <div style="display: flex; flex-direction: column; gap: 10px">
-<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; letter-spacing: 0.16em; font-size: 13px; color: #8a6d52">WHO YOU\'RE LEARNING FROM</p>
+<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; letter-spacing: 0.16em; font-size: 13px; color: #8a6d52">WHO YOU'RE LEARNING FROM</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65">I'm Holly, content strategist and founder of With Love Media. I studied retail marketing at university and I've been building businesses online for 14 years.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65">I've built both bricks and mortar and online businesses, sold online with a product and with a service, and managed social for brands from fintech to charities.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65">So you're not learning from someone who posted a bit and decided she's a strategist. You're learning from someone who has actually done it, and who will show you exactly how.</p>
@@ -303,11 +321,12 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; letter-spacing: 0.16em; font-size: 13px; color: #8a6d52">WHY I TEACH</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.65">I spent years doing social media for other people. The minute I stepped away, their content went quiet. So I stopped doing it for them and started teaching them how. I've been coaching since 2016, and everything I've learned along the way is now my method, The Standard.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+<div class="about-stats">
 <div style="background: #0f0d0d; color: #f5efe6; border-radius: 14px; padding: 18px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #d9c2a5">100 to 30k</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.4">followers for one client</p></div>
 <div style="background: #cdb08f; color: #151313; border-radius: 14px; padding: 18px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #151313">4 months</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.4">booked out ahead</p></div>
 <div style="background: #cdb08f; color: #151313; border-radius: 14px; padding: 18px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #151313">Full time</p><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.4">jobs left to coach</p></div>
 </div>
+<a class="btn btn-dark glow" style="align-self:flex-start" href="https://stan.store/Withlove/p/content-strategy-free-training-seen-trusted-chosen?utm_source=hollywithlove&amp;utm_medium=landing_page&amp;utm_campaign=free_masterclass">GET FREE ACCESS, CLICK HERE <span class="arrow">→</span></a>
 </div>
 </div>
 </section>
@@ -318,6 +337,7 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 30px; line-height: 1; color: #d9c2a5">or</p>
 <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.1">Will the algorithm keep deciding your income?</p>
 <p style="margin: 0; max-width: 640px; font-size: 18px; line-height: 1.65; color: #e6ddd2">Your work already changes lives. Your clients already rave about you. Your content just has to make that obvious to someone who's never met you.</p>
+<a class="btn glow" href="https://stan.store/Withlove/p/content-strategy-free-training-seen-trusted-chosen?utm_source=hollywithlove&amp;utm_medium=landing_page&amp;utm_campaign=free_masterclass">GET FREE ACCESS, CLICK HERE <span class="arrow">→</span></a>
 </div>
 </section>
 
