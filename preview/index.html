@@ -78,9 +78,9 @@ img{max-width:100%}
 .card:hover{transform:translateY(-8px) rotate(-.4deg)}
 .card-img{height:240px;background-size:cover;background-position:center}
 .card-body{padding:30px;display:flex;flex-direction:column;gap:14px;flex-grow:1}
-.price{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:34px;line-height:1;margin:0}
+.card .price,.price{margin:0;font-family:'Inter Tight',sans-serif;font-weight:900;font-size:34px;line-height:1;margin:0}
 .card h3{font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;font-size:24px;line-height:1.05;margin:0}
-.card p{margin:0;font-size:16px;line-height:1.6;color:#3a3330}
+.card p:not(.price):not(.label){margin:0;font-size:16px;line-height:1.6;color:#3a3330}
 .card ul{margin:0;padding-left:20px;font-size:15px;line-height:1.6;color:#3a3330}
 .card .btn{margin-top:auto;align-self:flex-start}
 .note{font-size:14px;color:#8a6d52;font-weight:600}
@@ -98,6 +98,7 @@ img{max-width:100%}
 .feature .card-img{min-height:280px}
 .feature .card-body{padding:30px}
 .hide-sm{display:none}
+.photo-stack{min-height:300px!important}
 .tablist{border-radius:22px}
 .tab{flex:1 1 40%}
 }
@@ -172,7 +173,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 </section>
 
 <section class="tex-leo" id="offers" style="padding:96px 0">
-<div class="wrap" style="display:flex;flex-direction:column;gap:34px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:34px;position:relative">
 <div style="display:flex;flex-direction:column;gap:14px;align-self:flex-start;background:#0f0d0d;padding:26px 30px;border-radius:22px;max-width:760px">
 <p class="eyebrow">ways to work with me</p>
 <h2 class="display" style="font-size:clamp(32px,4.2vw,56px)">Find your next step</h2>
@@ -311,7 +312,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 
 <section class="tex-croc" style="padding:96px 0">
 <div class="wrap reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
-<div style="position:relative;min-height:460px">
+<div class="photo-stack" style="position:relative;min-height:460px">
 <img src="../images/holly_coffee.jpg" alt="Coffee and chocolate on Holly's desk" style="position:absolute;left:0;top:30px;width:52%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(-4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
 <img src="../images/holly_chair.jpg" alt="Holly working on her laptop" style="position:absolute;right:0;top:0;width:50%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
 <img class="sticker" src="../images/st_heartcorner.png" alt="" aria-hidden="true" style="right:44%;top:-6px;width:60px">
