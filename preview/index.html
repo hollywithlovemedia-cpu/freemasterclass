@@ -106,6 +106,30 @@ img{max-width:100%}
 .tablist{border-radius:22px}
 .tab{flex:1 1 40%}
 }
+.sec{padding:72px 0}
+.hero{padding:44px 0 64px}
+.hero-grid{grid-template-columns:minmax(0,1fr) 380px!important;gap:48px!important}
+.hero-photo{position:relative}
+.hero-photo>img:first-child{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:8px solid #f5efe6;border-radius:18px;transform:rotate(2deg);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.hook-pic{display:none}
+.feature .card-body{justify-content:center;gap:14px}
+.feature .card-body h3{margin-bottom:4px}
+@media (max-width:900px){
+.sec{padding:48px 0}
+.hero{padding:28px 0 44px}
+.hero-grid{grid-template-columns:1fr!important}
+.hook-pic{display:block}
+.lead{font-size:16.5px!important;line-height:1.6!important}
+.stats{gap:24px!important}
+.stats .display{font-size:26px!important}
+.stats p:last-child{font-size:12.5px!important}
+.feature .card-img{min-height:220px!important;max-height:240px}
+.card-img{height:200px}
+.card-body,.feature .card-body{padding:24px!important}
+.photo-stack{min-height:250px!important}
+.wrap{padding:0 18px}
+.shot{width:260px}
+}
 @media (prefers-reduced-motion: reduce){.track,.wiggle,.spin,.float,.btn,.play-ring{animation:none}.reveal{opacity:1;transform:none}}
 </style>
 <!-- Meta Pixel Code -->
@@ -146,24 +170,25 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <div class="zebra hide-sm" style="position:absolute;top:0;right:0;width:30%;height:100%;opacity:.9"></div>
 <div class="hide-sm" style="position:absolute;top:0;right:0;width:30%;height:100%;background:linear-gradient(90deg,#0f0d0d 0%,rgba(15,13,13,.3) 45%,rgba(15,13,13,0) 100%)"></div>
 <div class="wrap hero-grid" style="position:relative">
-<div style="display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;flex-direction:column;gap:20px">
 <p class="eyebrow">hello, welcome in</p>
 <div class="hook-row"><h1 class="display" style="font-size:clamp(36px,5.6vw,78px)">Your content should be as <span style="color:#d9c2a5">skilled</span> as you are</h1><img class="hook-pic" src="../images/holly_pose.jpg" alt="Holly Newman"></div>
-<p style="margin:0;max-width:560px;font-size:19px;line-height:1.65;color:#e6ddd2">I'm Holly, content strategist and founder of With Love Media. I help coaches, educators and specialists who are brilliant at what they do get seen, trusted and chosen online, so strangers book them without needing to meet them first.</p>
+<p class="lead" style="margin:0;max-width:560px;font-size:19px;line-height:1.65;color:#e6ddd2">I'm Holly, content strategist and founder of With Love Media. I help coaches, educators and specialists who are brilliant at what they do get seen, trusted and chosen online, so strangers book them without needing to meet them first.</p>
 <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center">
 <a class="btn" href="/">WATCH THE FREE MASTERCLASS <span class="arrow">→</span></a>
 <a class="btn btn-ghost" href="#offers">WAYS TO WORK WITH ME</a>
 </div>
-<div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:10px">
+<div class="stats" style="display:flex;gap:32px;margin-top:6px">
 <div><p class="display" style="font-size:34px;color:#d9c2a5">14 years</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">building businesses online</p></div>
 <div><p class="display" style="font-size:34px;color:#d9c2a5">Since 2016</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">coaching women like you</p></div>
 </div>
 </div>
+<div class="hero-photo hide-sm"><img src="../images/holly_sofa_wide.jpg" alt="Holly working on her laptop"><img class="sticker wiggle" src="../images/st_fawnstar.png" alt="" aria-hidden="true" style="--r:12deg;right:-26px;top:-30px;width:110px"></div>
 </div>
 </section>
 
-<section class="tex-leo" id="offers" style="padding:96px 0">
-<div class="wrap" style="display:flex;flex-direction:column;gap:34px;position:relative">
+<section class="tex-leo sec" id="offers">
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px;position:relative">
 <div style="display:flex;flex-direction:column;gap:14px;align-self:flex-start;background:#0f0d0d;padding:26px 30px;border-radius:22px;max-width:760px">
 <p class="eyebrow">ways to work with me</p>
 <h2 class="display" style="font-size:clamp(32px,4.2vw,56px)">Find your next step</h2>
@@ -271,13 +296,13 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 </div>
 </section>
 
-<section style="padding:96px 0 70px;background:#0f0d0d">
-<div class="wrap reveal" style="display:flex;flex-direction:column;gap:12px;margin-bottom:34px;position:relative">
+<section class="sec" style="background:#0f0d0d">
+<div class="wrap reveal" style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px;position:relative">
 <p class="eyebrow">the proof</p>
 <h2 class="display" style="font-size:clamp(32px,4.2vw,56px)">Straight from my DMs</h2>
 <img class="sticker wiggle hide-sm" src="../images/st_folder.png" alt="" aria-hidden="true" style="--r:8deg;right:24px;top:-20px;width:160px">
 </div>
-<div class="marquee" style="padding:20px 0">
+<div class="marquee" style="padding:12px 0">
 <div class="track track-slow" style="align-items:center">
 <span class="shot"><img src="../images/t_IMG_2619.jpg" alt="Client message to Holly"></span>
 <span class="shot"><img src="../images/t_IMG_0897.jpg" alt="Client message to Holly"></span>
@@ -299,7 +324,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 </div>
 </section>
 
-<section class="tex-croc" style="padding:96px 0">
+<section class="tex-croc sec">
 <div class="wrap reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
 <div class="photo-stack" style="position:relative;min-height:460px">
 <img src="../images/holly_coffee.jpg" alt="Coffee and chocolate on Holly's desk" style="position:absolute;left:0;top:30px;width:52%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(-4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
@@ -316,9 +341,9 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 </div>
 </section>
 
-<footer style="padding:90px 0 60px;background:#0f0d0d;text-align:center">
-<div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:26px">
-<img class="float" src="../images/st_envelope.png" alt="" aria-hidden="true" style="--r:-6deg;width:150px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.6))">
+<footer class="sec" style="background:#0f0d0d;text-align:center">
+<div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:20px">
+<img class="float" src="../images/st_envelope.png" alt="" aria-hidden="true" style="--r:-6deg;width:96px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.6))">
 <h2 class="display" style="font-size:clamp(30px,4.4vw,58px)">You're a 10/10 and your content should prove it</h2>
 <a class="btn" href="/">START WITH THE FREE MASTERCLASS <span class="arrow">→</span></a>
 <div class="socials" style="justify-content:center;margin-top:10px">
@@ -327,7 +352,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <a class="social" href="https://www.linkedin.com/in/holly-newman-a85579143">LinkedIn</a>
 <a class="social" href="mailto:info@hollywithlove.com">info@hollywithlove.com</a>
 </div>
-<img class="spin" src="../images/logo_submark.png" alt="Holly With Love" style="width:110px;margin-top:20px">
+<img class="spin" src="../images/logo_submark.png" alt="Holly With Love" style="width:76px;margin-top:6px">
 <p style="margin:0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:20px;color:#c9b39b">Standards then strategy.</p>
 </div>
 </footer>
