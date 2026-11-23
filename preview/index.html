@@ -86,12 +86,12 @@ p,li{text-wrap:pretty}
 .card .price,.price{margin:0;font-family:'Inter Tight',sans-serif;font-weight:900;font-size:34px;line-height:1;margin:0}
 .card h3{font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;font-size:24px;line-height:1.05;margin:0}
 .card p:not(.price):not(.label){margin:0;font-size:16px;line-height:1.6;color:#3a3330}
-.card ul{margin:0;padding-left:20px;font-size:15px;line-height:1.6;color:#3a3330}
+.card ul{margin:0 0 4px;padding-left:20px;font-size:15px;line-height:1.6;color:#3a3330}
 .card .btn{margin-top:auto;align-self:flex-start}
 .note{font-size:14px;color:#8a6d52;font-weight:600}
-.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border-radius:26px;overflow:hidden;background:#f5efe6;color:#151313;box-shadow:0 24px 50px rgba(0,0,0,.4)}
-.feature .card-img{height:100%;min-height:420px}
-.feature .card-body{padding:44px;gap:18px}
+.feature{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);border-radius:26px;overflow:hidden;background:#f5efe6;color:#151313;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.feature .card-img{height:100%;min-height:340px}
+.feature .card-body{padding:34px 38px;gap:12px}
 .shot{display:block;width:320px;flex:0 0 auto;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.35)}
 .shot img{display:block;width:100%}
 .socials{display:flex;flex-wrap:wrap;gap:12px}
@@ -116,6 +116,12 @@ p,li{text-wrap:pretty}
 .hero-photo>img:first-child{display:block;width:100%;height:auto;transform:rotate(-3deg);filter:drop-shadow(0 26px 40px rgba(0,0,0,.6))}
 .hook-pic{display:none}
 .feature .card-body{justify-content:center;gap:14px}
+.feature h3{font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;line-height:1.05;margin:0}
+.feature p{margin:0;font-size:16px;line-height:1.6;color:#3a3330}
+.feature p.label{color:#8a6d52}
+.feature p.price{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:30px;line-height:1;color:#151313}
+.feature ul{margin:0;padding-left:20px;font-size:15px;line-height:1.7;color:#3a3330}
+.feature .btn{align-self:flex-start;margin-top:6px}
 .feature .card-body h3{margin-bottom:4px}
 @media (max-width:900px){
 .sec{padding:48px 0}
@@ -135,10 +141,10 @@ p,li{text-wrap:pretty}
 .shot{width:calc((100vw - 24px)/2.35);border-radius:12px}
 }
 .for-you{margin:0;max-width:520px;padding:14px 18px;border-left:3px solid #cdb08f;background:rgba(205,176,143,.08);border-radius:0 12px 12px 0;font-size:16px;line-height:1.55;color:#f5efe6;font-weight:600}
-@media (min-width:901px){.hero-grid{grid-template-columns:minmax(0,1fr) 440px!important}}
+@media (min-width:901px){.hero-grid{grid-template-columns:minmax(0,1fr) 500px!important}}
 .hook-wrap{display:none;position:relative;flex:0 0 auto}
-.hook-badge{position:absolute;left:-18px;bottom:-8px;width:62px}
-@media (max-width:900px){.hook-wrap{display:block}.hook-pic{display:block;width:172px!important;margin-right:-10px}.hook-row{gap:6px!important}.for-you{font-size:14.5px;padding:12px 14px}}
+.hook-badge{position:absolute;left:-14px;bottom:-6px;width:56px;filter:drop-shadow(0 8px 12px rgba(0,0,0,.5))}
+@media (max-width:900px){.hook-wrap{display:block}.hook-pic{display:block;width:200px!important;margin-right:-24px}.hook-row{gap:6px!important}.for-you{font-size:14.5px;padding:12px 14px}}
 @media (prefers-reduced-motion: reduce){.track,.wiggle,.spin,.float,.btn,.play-ring{animation:none}.reveal{opacity:1;transform:none}}
 </style>
 <!-- Meta Pixel Code -->
@@ -181,9 +187,9 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <div class="wrap hero-grid" style="position:relative">
 <div style="display:flex;flex-direction:column;gap:20px">
 <p class="eyebrow" style="font-size:15px">Hello, welcome in</p>
-<div class="hook-row"><h1 class="display" style="font-size:clamp(36px,5.6vw,78px)">You're a <span style="color:#d9c2a5">10/10</span> and your content should prove it</h1><span class="hook-wrap"><img class="hook-pic" src="../images/holly_cutout.png" alt="Holly Newman"><img class="hook-badge spin" src="../images/logo_submark.png" alt="" aria-hidden="true"></span></div>
-<p class="lead" style="margin:0;max-width:520px;font-size:16px;line-height:1.6;color:#e6ddd2">I'm Holly, a content strategist. I help coaches, educators and specialists who are brilliant at what they do get seen, trusted and chosen online, so strangers book them without needing to meet them first.</p>
-<p class="for-you">I'm the woman for you if you're brilliant at what you do, your clients rave about you, and your content still doesn't show it.</p>
+<div class="hook-row"><h1 class="display" style="font-size:clamp(36px,5.6vw,78px)">You're a <span style="color:#d9c2a5">10/10</span> and your content should prove it</h1><span class="hook-wrap"><img class="hook-pic" src="../images/holly_cutout.png" alt="Holly Newman"><img class="hook-badge spin" src="../images/st_fawnstar.png" alt="" aria-hidden="true"></span></div>
+<p class="lead" style="margin:0;max-width:520px;font-size:16px;line-height:1.6;color:#e6ddd2">I'm Holly, a content strategist. I work with coaches, educators, specialists and service providers who are experts in their field, and help them articulate that into content so they get a consistent flow of clients from social media.</p>
+<p class="for-you">I'm the woman for you if you're posting and showing up, but you're frustrated not knowing what to post or what to say to show how great you are at what you do.</p>
 <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center">
 <a class="btn" href="/">WATCH THE FREE MASTERCLASS <span class="arrow">→</span></a>
 <a class="btn btn-ghost" href="#offers">WAYS TO WORK WITH ME</a>
@@ -193,7 +199,7 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <div><p class="display" style="font-size:34px;color:#d9c2a5">Since 2016</p><p style="margin:4px 0 0;font-size:14px;color:#c9b39b">supporting women like you</p></div>
 </div>
 </div>
-<div class="hero-photo hide-sm"><img src="../images/holly_cutout.png" alt="Holly Newman"><img class="spin" src="../images/logo_submark.png" alt="" aria-hidden="true" style="position:absolute;left:-40px;bottom:30px;width:130px"><img class="sticker wiggle" src="../images/st_fawnstar.png" alt="" aria-hidden="true" style="--r:12deg;right:-10px;top:-20px;width:110px"></div>
+<div class="hero-photo hide-sm"><img src="../images/holly_cutout.png" alt="Holly Newman"><img class="spin" src="../images/st_fawnstar.png" alt="" aria-hidden="true" style="position:absolute;left:-30px;bottom:40px;width:120px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.5))"></div>
 </div>
 </section>
 
@@ -205,23 +211,23 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 </div>
 
 <div class="tablist" role="tablist" aria-label="Offers">
-<button class="tab" role="tab" id="tab-free" aria-controls="panel-free" aria-selected="true">START FREE</button>
-<button class="tab" role="tab" id="tab-programmes" aria-controls="panel-programmes" aria-selected="false" tabindex="-1">PROGRAMMES</button>
-<button class="tab" role="tab" id="tab-one" aria-controls="panel-one" aria-selected="false" tabindex="-1">1:1 WITH ME</button>
+<button class="tab" role="tab" id="tab-one" aria-controls="panel-one" aria-selected="true">1:1 WITH ME</button>
 <button class="tab" role="tab" id="tab-standard" aria-controls="panel-standard" aria-selected="false" tabindex="-1">THE STANDARD</button>
+<button class="tab" role="tab" id="tab-programmes" aria-controls="panel-programmes" aria-selected="false" tabindex="-1">PROGRAMMES</button>
+<button class="tab" role="tab" id="tab-free" aria-controls="panel-free" aria-selected="false" tabindex="-1">START FREE</button>
 </div>
 
-<div class="panel" role="tabpanel" id="panel-free" aria-labelledby="tab-free">
+<div class="panel" role="tabpanel" id="panel-free" aria-labelledby="tab-free" hidden>
 <div class="feature">
 <div class="card-img" style="background-image:url(../images/holly_pose.jpg)"></div>
 <div class="card-body">
-<p class="label" style="color:#8a6d52">FREE 60 MINUTE TRAINING</p>
+<p class="label" style="color:#8a6d52">FREE 60 MINUTE MASTERCLASS</p>
 <h3 style="font-size:clamp(26px,3vw,40px)">Seen, Trusted, Chosen masterclass</h3>
-<p>The three questions every stranger asks in her head before she books you, the five risks she's weighing up, and exactly how to answer all of it in your content. Strategy heavy, so grab a notepad.</p>
+<p>A 60 minute masterclass showing you what to post and how to shorten the sales process, so people can find you and buy the same day.</p>
 <ul>
-<li>Why people watch you for months and still don't book</li>
-<li>Seven ways to lower her risk so booking you feels safe</li>
+<li>The questions your content needs to answer before she books</li>
 <li>The weekly content rhythm I give my clients</li>
+<li>How your clients actually buy, and how to lead them there</li>
 </ul>
 <p class="price">Free</p>
 <a class="btn btn-dark" href="/">GET INSTANT ACCESS <span class="arrow">→</span></a>
@@ -241,13 +247,12 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <li><strong>Session two:</strong> The Five Frameworks</li>
 <li><strong>Session three:</strong> The Conversion Layer</li>
 </ul>
-<p class="price">£99</p>
 <a class="btn btn-dark" href="https://stan.store/Withlove/p/stories-that-sell-program">GET INSTANT ACCESS <span class="arrow">→</span></a>
 </div>
 </div>
 </div>
 
-<div class="panel" role="tabpanel" id="panel-one" aria-labelledby="tab-one" hidden>
+<div class="panel" role="tabpanel" id="panel-one" aria-labelledby="tab-one">
 <div class="cards">
 <div class="card">
 <div class="card-img" style="background-image:url(../images/holly_chair.jpg)"></div>
@@ -256,7 +261,6 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <h3>1hr Intensive Strategy Call</h3>
 <p>We take a deep dive into your business and your content. I find your gaps and you leave with clear actions to start straight away.</p>
 <p class="note">Refunded in full if you join The Standard.</p>
-<p class="price">£175</p>
 <a class="btn btn-dark" href="https://stan.store/Withlove/p/book-a-11-call-with-me-4d7kz">BOOK MY CALL <span class="arrow">→</span></a>
 </div>
 </div>
@@ -266,7 +270,6 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <p class="label" style="color:#8a6d52">FOUR WEEKS</p>
 <h3>4 Week VIP Intensive</h3>
 <p>Four 1:1 calls and unlimited support for four weeks, so you're creating content that gets you seen, trusted and chosen, with me checking it as you go.</p>
-<p class="price">£1,200</p>
 <a class="btn btn-dark" href="https://stan.store/Withlove/p/4-week-vip-intensive-">BOOK MY INTENSIVE <span class="arrow">→</span></a>
 </div>
 </div>
@@ -276,7 +279,6 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <p class="label" style="color:#8a6d52">ONE FULL DAY, IN PERSON</p>
 <h3>In Person VIP Day</h3>
 <p>A full day together in person in Eastbourne. Your strategy, your content and your next steps, built in one room.</p>
-<p class="price">£997</p>
 <a class="btn btn-dark" href="https://stan.store/Withlove/p/inperson-vip-day-eastbourne">BOOK MY VIP DAY <span class="arrow">→</span></a>
 </div>
 </div>
@@ -318,15 +320,15 @@ src="https://www.facebook.com/tr?id=1692054382334637&ev=PageView&noscript=1"
 <section class="tex-croc sec">
 <div class="wrap reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
 <div class="photo-stack" style="position:relative;min-height:460px">
-<img src="../images/holly_coffee.jpg" alt="Coffee and chocolate on Holly's desk" style="position:absolute;left:0;top:30px;width:52%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(-4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
-<img src="../images/holly_chair.jpg" alt="Holly working on her laptop" style="position:absolute;right:0;top:0;width:50%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
+
+<img id="about-photo" src="../images/holly_chair.jpg" alt="Holly working on her laptop" style="position:absolute;left:12%;top:0;width:66%;border:8px solid #f5efe6;border-radius:4px;transform:rotate(4deg);box-shadow:0 20px 40px rgba(0,0,0,.5)">
 <img class="sticker" src="../images/st_heartcorner.png" alt="" aria-hidden="true" style="right:44%;top:-6px;width:60px">
 </div>
 <div style="background:#f5efe6;color:#151313;border-radius:22px;padding:40px;display:flex;flex-direction:column;gap:16px">
 <p class="label" style="color:#8a6d52">WHO YOU'RE LEARNING FROM</p>
-<h2 class="display" style="font-size:clamp(30px,3.6vw,46px)">I've actually done it</h2>
-<p style="margin:0;font-size:17px;line-height:1.65">I studied marketing and I've been building businesses online for 14 years. I've built both bricks and mortar and online businesses, and I've sold online with a product and with a service.</p>
-<p style="margin:0;font-size:17px;line-height:1.65">I've been supporting women since 2016, and everything I've learned along the way is now my method, The Standard.</p>
+<h2 class="display" style="font-size:clamp(30px,3.6vw,46px)">I haven't just taught it, I've built it</h2>
+<p style="margin:0;font-size:17px;line-height:1.65">I built my first bricks and mortar business at 22, selling fashion globally using Instagram back in 2012. Since then I've worked with thousands of women all over the world, from multimillion pound businesses to new founders building their personal brand.</p>
+<p style="margin:0;font-size:17px;line-height:1.65">With a following of 100k across platforms, I haven't just taught it. I've built it, studied it and got the results for myself and others.</p>
 <a class="btn btn-dark" href="https://www.instagram.com/holly_withlove" style="align-self:flex-start">FOLLOW ALONG ON INSTAGRAM <span class="arrow">→</span></a>
 </div>
 </div>
