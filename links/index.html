@@ -239,21 +239,28 @@ p,li{text-wrap:pretty}
 <div class="mg-copy">
 <p class="label" style="color:#8a6d52">SOCIAL MEDIA MANAGEMENT · APPLICATION ONLY</p>
 <h3>Hand your content over to me</h3>
-<p>I'm opening a small number of management spaces again. I take your strategy, content and posting off your plate and build your account on Seen, Trusted, Chosen, so it brings you clients while you get on with the work you're brilliant at.</p>
+<p>I'm opening management spaces again, and I only take on a limited number of clients so every account gets my full attention. I take your strategy, content and posting off your plate and build your account on Seen, Trusted, Chosen, so it brings you clients while you get on with the work you're brilliant at.</p>
+<p style="margin:0;font-weight:700;color:#151313">Packages are a minimum of 3 months.</p>
 <div class="mg-stats">
+<div><b>2.4M</b><span>accounts reached</span></div>
 <div><b>176K</b><span>views in 30 days</span></div>
-<div><b>66.7K</b><span>accounts reached</span></div>
-<div><b>2,170</b><span>profile visits</span></div>
-<div><b>63.7K</b><span>views on one reel</span></div>
+<div><b>+1,630</b><span>followers in 7 days</span></div>
+<div><b>204K</b><span>accounts reached in 7 days</span></div>
 </div>
-<p class="note" style="margin:0">Real numbers from a management client in the construction industry, a niche most people would call boring.</p>
+<p class="note" style="margin:0">Real numbers from my management clients, from construction to hair salons to fellow social media managers.</p>
 <a class="btn btn-dark" href="https://ig.me/m/holly_withlove">APPLY FOR A SPACE <span class="arrow">→</span></a>
 <p style="margin:0;font-size:13px;color:#8a6d52">Send me a DM saying MANAGEMENT and I'll send you the application.</p>
 </div>
 <div class="mg-stories" aria-label="Management client results from my Instagram highlights">
+<img src="../images/mg_2m.jpg" alt="Management client results: 2.4M accounts reached, 73.3K accounts engaged and 200K followers">
 <img src="../images/mg_insights.jpg" alt="Insights for a management client: 176,117 views and 66,703 accounts reached in 30 days, 2,170 profile visits and 191 link taps">
 <img src="../images/mg_reels.jpg" alt="Reels made for a construction client with 63.7K, 43K, 38K and 27.4K views">
 <img src="../images/mg_win.jpg" alt="Management client message: I've signed up 1 new 1:1 client for my 12 week programme, your social media help is getting to the right women">
+<img src="../images/mg_week1.jpg" alt="First week insights for a management client: reels with 42,575, 48,016, 22,626 and 65,224 plays">
+<img src="../images/mg_followers.jpg" alt="A managed account grew by 1,630 followers in seven days to 25,701 followers">
+<img src="../images/mg_204k.jpg" alt="Insights overview: 204K accounts reached in seven days, up 266 percent">
+<img src="../images/mg_month1.jpg" alt="First month client results: 90.7K accounts reached and accounts engaged up 58.5 percent">
+<img src="../images/mg_salon.jpg" alt="Before and after Instagram grid for a hair salon management client">
 <img src="../images/mg_dm.jpg" alt="New management client getting her first DM from a woman who wants to work with her after loving her posts">
 <img src="../images/mg_grid.jpg" alt="A management client's Instagram grid before and after, more branded and more specific">
 </div>
@@ -359,16 +366,6 @@ p,li{text-wrap:pretty}
 </div>
 </section>
 
-<section style="background:#cdb08f;color:#151313;padding:34px 0">
-<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
-<div style="display:flex;flex-direction:column;gap:6px;max-width:640px">
-<p class="label" style="color:#5a4636">WANT A STORE LIKE MINE?</p>
-<p style="margin:0;font-family:'Inter Tight',sans-serif;font-weight:900;font-size:clamp(22px,2.6vw,30px);text-transform:uppercase;line-height:1.1">Start your own Stan Store</p>
-<p style="margin:0;font-size:15px;line-height:1.55">It's what I use to sell my calls, programmes and free masterclass, all from one link.</p>
-</div>
-<a class="btn btn-dark" id="stan-signup" href="https://join.stan.store/Withlove">START MY STAN STORE <span class="arrow">→</span></a>
-</div>
-</section>
 <footer class="sec" style="background:#0f0d0d;text-align:center">
 <div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:20px">
 <img class="float" src="../images/st_envelope.png" alt="" aria-hidden="true" style="--r:-6deg;width:96px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.6))">
@@ -408,11 +405,9 @@ p,li{text-wrap:pretty}
   });
   // tag Stan links and track leads
   document.querySelectorAll('a[href*="stan.store"]').forEach(function(a){
-    if(a.hostname==='join.stan.store')return;
     var u=new URL(a.href);u.searchParams.set('utm_source','hollywithlove');u.searchParams.set('utm_medium','home_page');a.href=u.toString();
     a.addEventListener('click',function(){if(window.fbq)fbq('track','Lead',{content_name:a.textContent.trim()});});
   });
-  document.getElementById('stan-signup').addEventListener('click',function(){if(window.fbq)fbq('trackCustom','StanSignupClick');});
   document.querySelectorAll('a[href*="ig.me"]').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('track','Contact',{content_name:'Enquire The Standard'});});});
   // reveal on scroll
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
