@@ -41,7 +41,7 @@ img{max-width:100%}
 /* marquee */
 .marquee{overflow:hidden;white-space:nowrap}
 .track{display:inline-flex;gap:44px;padding-right:44px;animation:scroll 30s linear infinite}
-.track-slow{animation-duration:70s}
+.track-slow{animation-duration:45s}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* stickers */
 .sticker{position:absolute;pointer-events:none;filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
@@ -128,7 +128,8 @@ img{max-width:100%}
 .card-body,.feature .card-body{padding:24px!important}
 .photo-stack{min-height:250px!important}
 .wrap{padding:0 18px}
-.shot{width:260px}
+.track-slow{gap:12px;padding-right:12px;animation-duration:32s}
+.shot{width:calc((100vw - 36px)/3);border-radius:10px}
 }
 @media (prefers-reduced-motion: reduce){.track,.wiggle,.spin,.float,.btn,.play-ring{animation:none}.reveal{opacity:1;transform:none}}
 </style>
