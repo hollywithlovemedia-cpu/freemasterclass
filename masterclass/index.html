@@ -55,8 +55,35 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 .sticker{position:absolute;pointer-events:none;filter:drop-shadow(0 14px 22px rgba(0,0,0,.45))}
 .wiggle{animation:wiggle 4s ease-in-out infinite}
 @keyframes wiggle{0%,100%{transform:rotate(var(--r,0deg))}50%{transform:rotate(calc(var(--r,0deg) + 7deg)) scale(1.04)}}
-.polka{background-image:url(/images/tile_giraffe.jpg);background-size:556px auto;background-repeat:repeat}
+.polka{background:linear-gradient(rgba(205,176,143,.88),rgba(205,176,143,.88)),url(/images/tile_linen.jpg) repeat;background-size:auto,420px auto}
 .tex-linen{background-image:url(/images/tile_linen.jpg);background-size:420px auto;background-repeat:repeat}
+.mc-top{display:flex;align-items:center;gap:20px}
+.mc-top-text{display:flex;flex-direction:column;gap:18px;min-width:0}
+.mc-label{margin:0;align-self:flex-start;font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(22px,2.6vw,34px);letter-spacing:.06em;line-height:1;color:#151313;background:#d9c2a5;padding:12px 20px;border-radius:12px;transform:rotate(-2deg);box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.mc-cutout{display:none}
+.mc-visual{flex:1 1 440px;position:relative;align-self:center;padding:30px 10px 40px}
+.laptop{--r:0deg;position:relative;max-width:560px;margin:0 auto}
+.laptop-screen{background:#1b1919;border:2px solid #3a3434;border-radius:18px 18px 6px 6px;padding:14px 14px 18px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.screen-inner{position:relative;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#0f0d0d}
+.screen-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.screen-copy{position:absolute;left:7%;top:12%;right:40%;display:flex;flex-direction:column;gap:6px}
+.screen-kicker{margin:0;font-family:'Inter Tight',sans-serif;font-weight:800;letter-spacing:.2em;font-size:clamp(9px,1vw,12px);color:#d9c2a5}
+.screen-title{margin:0;font-family:'Inter Tight',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(20px,2.6vw,34px);line-height:.98;color:#f5efe6;text-shadow:0 4px 18px rgba(0,0,0,.6)}
+.screen-sub{margin:0;font-size:clamp(11px,1.1vw,14px);color:#e6ddd2}
+.screen-play{position:absolute;left:76%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(245,239,230,.94);display:flex;align-items:center;justify-content:center;animation:pulse 2.2s ease-in-out infinite}
+.screen-bar{position:absolute;left:5%;right:5%;bottom:7%;height:4px;border-radius:4px;background:rgba(245,239,230,.25)}
+.screen-bar span{display:block;width:6%;height:100%;border-radius:4px;background:#d9c2a5}
+.laptop-base{height:16px;margin:0 -7%;background:linear-gradient(#cfc8bf,#8f877d);border-radius:0 0 18px 18px;position:relative}
+.laptop-base::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:6px;background:#7d766d;border-radius:0 0 8px 8px}
+@media (max-width:700px){
+.mc-cutout{display:block;flex:0 0 auto;width:150px;height:auto;margin-right:-16px;transform:rotate(3deg);filter:drop-shadow(0 12px 20px rgba(0,0,0,.55))}
+.mc-top{align-items:flex-end;gap:4px}
+.mc-label{font-size:22px}
+.screen-play{width:46px;height:46px}
+.mc-visual{padding:10px 0 20px}
+}
+.mc-cut-desk{position:absolute;left:-60px;bottom:-10px;width:190px;z-index:3;transform:rotate(-3deg);filter:drop-shadow(0 16px 26px rgba(0,0,0,.6))}
+@media (max-width:900px){.mc-cut-desk{display:none}}
 @media (max-width: 700px){.hide-sm{display:none}}
 @media (prefers-reduced-motion: reduce){.track,.float,.float-2,.spin,.pulse,.glow,.wiggle{animation:none}}
 </style>
@@ -84,26 +111,37 @@ a{color:#f5efe6}a:hover{color:#e9d3b4}
 <div style="position: absolute; top: 0; right: 0; width: 34%; height: 100%; background: linear-gradient(90deg, #0f0d0d 0%, rgba(15,13,13,0.35) 40%, rgba(15,13,13,0) 100%)"></div>
 <div style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
 <div style="flex: 999 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
-<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.1; letter-spacing: 0.02em; color: #d9c2a5">free masterclass</p>
+<div class="mc-top">
+<div class="mc-top-text">
+<p class="mc-label">Free masterclass</p>
 <h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(36px, 4.8vw, 66px); line-height: 0.98; letter-spacing: -0.01em; color: #f5efe6">You are an expert in your service, your content should <span style="color: #d9c2a5">prove it</span></h1>
+</div>
+<img class="mc-cutout" src="/images/holly_cutout.png" alt="Holly Newman">
+</div>
 <p style="margin: 0; max-width: 600px; font-size: 19px; line-height: 1.6; color: #e6ddd2">By the end you'll know exactly what to say so your content sells the way you do in person. Seen, Trusted, Chosen, my method for turning strangers into clients without ever meeting them first.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: center">
 <a class="btn glow" href="https://stan.store/Withlove/p/content-strategy-free-training-seen-trusted-chosen?utm_source=hollywithlove&amp;utm_medium=landing_page&amp;utm_campaign=free_masterclass">GET INSTANT ACCESS <span class="arrow">→</span></a>
 <span style="font-size: 15px; color: #c9b39b">Free. Watch it tonight.</span>
 </div>
 </div>
-<div style="flex: 1 1 380px; position: relative; min-height: 560px">
-<div class="float" style="--r: -4deg; position: absolute; left: 0; top: 0; width: 64%; aspect-ratio: 300 / 353; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.55))">
-<img src="/images/holly_pose.jpg" alt="Holly smiling in a black one shoulder top" style="position: absolute; left: 13%; top: 11%; width: 74%; height: 78%; object-fit: cover">
-<img src="/images/st_frame.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%">
+<div class="mc-visual">
+<img class="mc-cut-desk hide-sm" src="/images/holly_cutout.png" alt="Holly Newman">
+<div class="laptop float">
+<div class="laptop-screen">
+<div class="screen-inner">
+<img src="/images/holly_sofa_wide.jpg" alt="" aria-hidden="true" class="screen-bg">
+<div class="screen-copy">
+<p class="screen-kicker">FREE MASTERCLASS</p>
+<p class="screen-title">Seen, Trusted, Chosen</p>
+<p class="screen-sub">with Holly Newman</p>
 </div>
-<div class="float-2" style="--r: 5deg; position: absolute; right: 0; top: 230px; width: 52%">
-<img src="/images/holly_sofa.jpg" alt="Holly working on her laptop on a cream sofa" style="display: block; width: 100%; height: auto; border: 10px solid #f5efe6; border-radius: 4px; box-shadow: 0 24px 50px rgba(0,0,0,0.5)">
-<img class="sticker" src="/images/st_heartcorner.png" alt="" aria-hidden="true" style="left: -14px; top: -14px; width: 64px; height: auto">
-<img class="sticker" src="/images/st_heartcorner.png" alt="" aria-hidden="true" style="right: -14px; bottom: -14px; width: 64px; height: auto; transform: rotate(180deg)">
+<span class="screen-play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#151313"><path d="M8 5v14l11-7z"/></svg></span>
+<div class="screen-bar"><span></span></div>
 </div>
-<img class="sticker wiggle" src="/images/st_fawnstar.png" alt="" aria-hidden="true" style="--r: 12deg; right: 4%; top: 30px; width: 130px; height: auto">
-<img class="spin" src="/images/logo_submark.png" alt="" aria-hidden="true" style="position: absolute; left: 30%; bottom: -10px; width: 130px; height: auto">
+</div>
+<div class="laptop-base"></div>
+</div>
+<img class="sticker wiggle" src="/images/st_fawnstar.png" alt="" aria-hidden="true" style="--r: 12deg; right: -10px; top: -40px; width: 110px; height: auto">
 </div>
 </div>
 </section>
