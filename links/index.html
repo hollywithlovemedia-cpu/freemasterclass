@@ -168,7 +168,26 @@ p,li{text-wrap:pretty}
 .for-you li::marker{color:#cdb08f}
 .fy-label{margin:0 0 8px;font-family:'Inter Tight',sans-serif;font-weight:800;letter-spacing:.18em;font-size:11.5px;color:#cdb08f}
 .fy-end{margin:10px 0 0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:16px;color:#d9c2a5}
-@media (prefers-reduced-motion: reduce){.track,.wiggle,.spin,.float,.btn,.play-ring{animation:none}.reveal{opacity:1;transform:none}}
+.offers-head{border:1.5px solid rgba(217,194,165,.55);animation:headglow 2.6s ease-in-out infinite}
+@keyframes headglow{0%,100%{box-shadow:0 0 18px 2px rgba(217,194,165,.25),0 0 0 0 rgba(217,194,165,0)}50%{box-shadow:0 0 46px 12px rgba(230,205,170,.55),0 0 0 4px rgba(217,194,165,.12)}}
+.tablist{border:1.5px solid #2f2828;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.tab{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;overflow:hidden;transition:background .25s ease,color .25s ease,transform .2s ease,box-shadow .25s ease}
+.tab-ic{font-size:14px;line-height:1;transition:transform .3s ease}
+.tab:hover{background:rgba(217,194,165,.14);color:#f5efe6;transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.35)}
+.tab:hover .tab-ic{transform:scale(1.3) rotate(-10deg)}
+.tab:active{transform:scale(.95)}
+.tab[aria-selected="true"]{background:#f5efe6;color:#151313;animation:tabglow 2.2s ease-in-out infinite}
+.tab[aria-selected="true"] .tab-ic{transform:scale(1.15)}
+@keyframes tabglow{0%,100%{box-shadow:0 0 10px 1px rgba(240,222,196,.35)}50%{box-shadow:0 0 26px 6px rgba(240,222,196,.75)}}
+.tab:focus-visible{outline:2px solid #d9c2a5;outline-offset:3px}
+.tab .ripple{position:absolute;border-radius:50%;background:rgba(205,176,143,.45);transform:scale(0);animation:ripple .6s ease-out forwards;pointer-events:none}
+@keyframes ripple{to{transform:scale(4);opacity:0}}
+.tab-hint{margin:-10px 0 0 6px;font-size:13px;font-weight:600;color:#e6ddd2;display:flex;align-items:center;gap:8px;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.tab-hint .tap{display:inline-block;animation:tap 1.4s ease-in-out infinite}
+@keyframes tap{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.tab-hint.gone{opacity:0;transition:opacity .4s ease}
+@media (max-width:900px){.tab{white-space:nowrap;font-size:11.5px;letter-spacing:.08em;padding:0 10px;min-height:48px;gap:6px}}
+@media (prefers-reduced-motion: reduce){.offers-head,.tab,.tab-hint .tap,.track,.wiggle,.spin,.float,.btn,.play-ring{animation:none}.reveal{opacity:1;transform:none}}
 </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -222,18 +241,19 @@ p,li{text-wrap:pretty}
 
 <section class="tex-leo sec" id="offers">
 <div class="wrap" style="display:flex;flex-direction:column;gap:24px;position:relative">
-<div style="display:flex;flex-direction:column;gap:14px;align-self:flex-start;background:#0f0d0d;padding:26px 30px;border-radius:22px;max-width:760px">
+<div class="offers-head" style="display:flex;flex-direction:column;gap:14px;align-self:flex-start;background:#0f0d0d;padding:26px 30px;border-radius:22px;max-width:760px">
 <p class="eyebrow">ways to work with me</p>
 <h2 class="display" style="font-size:clamp(32px,4.2vw,56px)">Find your next step</h2>
 </div>
 
 <div class="tablist" role="tablist" aria-label="Offers">
-<button class="tab" role="tab" id="tab-one" aria-controls="panel-one" aria-selected="true">1:1 WITH ME</button>
-<button class="tab" role="tab" id="tab-standard" aria-controls="panel-standard" aria-selected="false" tabindex="-1">THE STANDARD</button>
-<button class="tab" role="tab" id="tab-mgmt" aria-controls="panel-mgmt" aria-selected="false" tabindex="-1">MANAGEMENT</button>
-<button class="tab" role="tab" id="tab-programmes" aria-controls="panel-programmes" aria-selected="false" tabindex="-1">PROGRAMMES</button>
-<button class="tab" role="tab" id="tab-free" aria-controls="panel-free" aria-selected="false" tabindex="-1">START FREE</button>
+<button class="tab" role="tab" id="tab-one" aria-controls="panel-one" aria-selected="true"><span class="tab-ic" aria-hidden="true">✦</span>1:1 WITH ME</button>
+<button class="tab" role="tab" id="tab-standard" aria-controls="panel-standard" aria-selected="false" tabindex="-1"><span class="tab-ic" aria-hidden="true">♛</span>THE STANDARD</button>
+<button class="tab" role="tab" id="tab-mgmt" aria-controls="panel-mgmt" aria-selected="false" tabindex="-1"><span class="tab-ic" aria-hidden="true">📱</span>MANAGEMENT</button>
+<button class="tab" role="tab" id="tab-programmes" aria-controls="panel-programmes" aria-selected="false" tabindex="-1"><span class="tab-ic" aria-hidden="true">▶</span>PROGRAMMES</button>
+<button class="tab" role="tab" id="tab-free" aria-controls="panel-free" aria-selected="false" tabindex="-1"><span class="tab-ic" aria-hidden="true">♡</span>START FREE</button>
 </div>
+<p class="tab-hint"><span class="tap">👆</span> Tap a tab to explore</p>
 
 <div class="panel" role="tabpanel" id="panel-free" aria-labelledby="tab-free" hidden>
 <div class="feature">
@@ -433,7 +453,11 @@ p,li{text-wrap:pretty}
     if(window.fbq)fbq('trackCustom','ViewOffers',{tab:t.textContent.trim()});
   }
   tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('click',function(e){select(t);
+      var rc=t.getBoundingClientRect(),d=Math.max(rc.width,rc.height),sp=document.createElement('span');
+      sp.className='ripple';sp.style.width=sp.style.height=d+'px';sp.style.left=(e.clientX-rc.left-d/2)+'px';sp.style.top=(e.clientY-rc.top-d/2)+'px';
+      t.appendChild(sp);setTimeout(function(){sp.remove()},650);
+      var h=document.querySelector('.tab-hint');if(h)h.classList.add('gone');});
     t.addEventListener('keydown',function(e){
       if(e.key==='ArrowRight'){select(tabs[(i+1)%tabs.length],true);e.preventDefault();}
       if(e.key==='ArrowLeft'){select(tabs[(i-1+tabs.length)%tabs.length],true);e.preventDefault();}
